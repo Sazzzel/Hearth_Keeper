@@ -29,12 +29,6 @@ For Admin access with relevant sign-in information: [Hearth Keeper Admin ADD Thi
     - [MoSCoW Prioritization](#moscow-prioritization)
     - [Sprints](#sprints)
   - [User Stories](#user-stories)
-    - [Visitor User Stories](#visitor-user-stories)
-    - [Epic - User Profile](#epic---user-profile)
-    - [Epic - Articles](#epic---articles)
-    - [Epic - Booking](#epic---booking)
-    - [Epic - Photo Gallery](#epic---photo-gallery)
-    - [Epic - Visit Us/Reviews](#epic---visit-usreviews)
   - [Scope Plane](#scope-plane)
   - [Structural Plane](#structural-plane)
   - [Skeleton \& Surface Planes](#skeleton--surface-planes)
@@ -54,10 +48,10 @@ For Admin access with relevant sign-in information: [Hearth Keeper Admin ADD Thi
   - [Connecting to GitHub](#connecting-to-github)
   - [Django Project Setup](#django-project-setup)
   - [Cloudinary API](#cloudinary-api)
-  - [Elephant SQL](#elephant-sql)
+  - [Postgre SQL](#Postgre-SQL)
   - [Heroku deployment](#heroku-deployment)
-  - [Clone project](#clone-project)
-  - [Fork Project](#fork-project)
+  - [Clone the project](#clone-the-Project)
+  - [Fork the Project](#fork-the-Project)
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
@@ -138,15 +132,16 @@ Before starting work on Hearth Keeper I used my [Github Projects Board ADD THIS]
 
 ### MoSCoW Prioritization
 
-I chose to follow the MoSCoW Prioritization method for Hearth Keeper, identifying and labelling my:
+I utilized the MoSCoW Prioritization method to structure and categorize the features of Hearth Keeper, assigning each a specific priority level:
 
-- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project early.
-  
-- **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
-
-- **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
-
-- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release. Also I will use this tags for any future features I wish to add to my project at a later date.
+- <b>Must Haves:</b><br> 
+These represent the essential, non-negotiable components of the project. Completing the "Must Haves" ensured the development of a Minimum Viable Product (MVP) early in the process.
+- <b>Should Haves:</b><br> 
+These features add significant value to the project but are not critical at the MVP stage. While important, "Should Haves" are addressed only after all "Must Haves" are completed.
+- <b>Could Haves:</b><br> 
+These are optional enhancements or bonus features. While they would be nice to include, they are implemented only if time permits after the higher-priority items are finished.
+- <b>Won't Haves:</b><br> 
+These are features that are either out of scope for the current release or deemed low priority. They may also include potential features to consider for future updates or iterations.
 
 ### Sprints
 
@@ -156,18 +151,21 @@ I broke my process into User Stories and Testing Tasks, which I converted into i
 
 All of my user stories can be seen on my [Github Projects Board ADD THIS](). They were all made before I started my project and managed throughout the development. 
 
+| User Story | Priority |
+|----------------------------------------------------------------------------------------------------------------------------|---------------|
+
 ## Scope Plane
 
-As this would not only be the building of my final project but also a learning experiance using new API's and covering many to many databases. I have built this website using technologies I didn't know exsisted before I started this 16 week Full Stack Course. These technologies include Django, Bootstrap and Cloudinary. I follwed my agile planning and my user stories to help me keep on track and not fall into the many "what if I add..." sinarions. I did however write these down on paper with the forsite of adding these as my future fatures. I added my User Stories and Testing Tasks as issues on my [Github Projects Board ADD THIS]().
+Building this project not only marked the completion of my final project but also served as a valuable learning experience, introducing me to new APIs and the complexities of many-to-many database relationships. I developed this website using technologies I was unfamiliar with before starting the 16-week Full Stack Course, including Django, Bootstrap, and Cloudinary. I followed an agile approach and worked through my user stories to stay focused, avoiding the temptation to get lost in “what if I add…” scenarios. However, I did document these ideas on paper with the intention of incorporating them into future features. I added the User Stories and Testing Tasks as issues on my [GitHub Projects Board ADD THIS]().
 
-Essential features of my project were:
+The essential features of my project include:
 
-- A Responsive website for all device sizes 
-- User Authentication
-- Recipe feature with full CRUD functionality
-- Comments feature with full CRUD functionality
+- A responsive website optimized for all device sizes
+- User authentication
+- Recipe functionality with full CRUD capabilities
+- Commenting functionality with full CRUD capabilities
 
-I planned my project thoroughly as this has been something I have wanted to use for a long time. No other site I have used previously have lived upto my expectations of what a recipe site in 2024 should offer. 
+I planned my project thoroughly, as this is a website I have long wanted to create. No other recipe site I’ve used so far meets my expectations for what a modern recipe platform should offer in 2024.
 
 ## Structural Plane
 
@@ -181,7 +179,7 @@ I planned my project thoroughly as this has been something I have wanted to use 
 
 ### Wireframes
 
-The wireframes for Hearth Keeper were created in Figma. [Figma](www.figma.com) is an easy and fast design system that is a cloud-based design tool. It is easy to make user interface (UI) and user experience (UX) design projects. It’s a vector graphics editor that allows designers and developers to create, prototype, and test digital products such as websites, mobile apps, and software interfaces.
+TThe wireframes for Hearth Keeper were designed using Figma. [Figma](www.figma.com) is a cloud-based design tool that enables quick and efficient creation of user interface (UI) and user experience (UX) designs. As a vector graphics editor, it allows designers and developers to create, prototype, and test digital products such as websites, mobile apps, and software interfaces.
 
 **Mobile/Tablet view for:**  
 
@@ -281,4 +279,119 @@ Hearth Keeper was built using my current knowledge of Django and focused on prov
 **CSRF Tokens** 
 
 CSRF (Cross-Site Request Forgery) tokens are included in every form to authenticate the request with the server upon submission. Without these tokens, a site becomes vulnerable to attacks where malicious actors could steal user data.
+
+# Features
+
+## User View - Registered/Unregistered
+
+## CRUD Functionality
+
+## Feature Showcase 
+
+## Future Features
+
+# Technologies & Languages Used
+
+- HTML
+- CSS
+- JavaScript
+- Python
+- [Git](https://git-scm.com/) used for version control.
+- [Github](https://www.github.com) used for online storage of codebase and Projects tool.
+- [Figma](https://www.figma.com) for project design planning and wireframe creation.
+- [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
+- [Cloudinary](https://cloudinary.com/) was used for cloud media storage of user uploaded images.
+- [Heroku](https://www.heroku.com) was used to host the FreeFido application.
+
+## Libraries & Frameworks
+
+## Tools & Programs
+
+# Testing
+
+- For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+# Deployment
   
+## Connecting to GitHub  
+
+To start this project from scratch, follow these steps to create a new GitHub repository using the [Code Institute's Template](https://github.com/Code-Institute-Org/ci-full-template). This template provides the necessary tools to set up your project:
+
+1. Log in to [GitHub](https://github.com/) or create an account if you don’t already have one.
+2. Go to the CI Full Template linked above.
+3. Click "Use this template" and select "Create a new repository".
+4. Enter a name for your new repository and click "Create repository from template".
+5. Once the repository is created, click the green "Open " button (if you are using GitPod ) to generate a new workspace.
+
+## Django Project Setup
+
+## Cloudinary API 
+
+## Postgre SQL
+
+## Heroku deployment
+
+## Clone the Project
+
+To create a local clone of this repository from GitHub, follow these steps:
+1. <b>Log in to GitHub:</b><br>
+Ensure you are logged into your GitHub account.
+2. <b>Locate the Repository:</b><br>
+The Hearth Keeper Repository can be accessed via this [link](https://github.com/Sazzzel/Hearth_Keeper).
+3. <b>Copy the Repository URL:</b><br>
+- Above the list of files in the repository, click the "Code" button.
+- Select your preferred cloning method: HTTPS, SSH, or GitHub CLI.
+- Click the "Copy" button to copy the repository URL to your clipboard.
+4. <b>Open Your Terminal:</b><br>
+Launch your terminal or Git Bash.
+5. <b>Navigate to Your Desired Directory:</b><br>
+Change the current working directory to the location where you want to clone the repository.
+6. <b>Clone the Repository:</b><br>
+- Use the git clone command followed by the copied URL:
+- git clone <copied-repository-url>
+- Replace <copied-repository-url> with the URL you copied in Step 3.
+7. <b>Install Dependencies:</b><br>
+Navigate to the project directory and install the required dependencies by running:
+pip3 install -r requirements.txt
+8. <b>Set Up the env.py File:</b><br>
+- Create an env.py file to store sensitive data such as your Cloudinary API key and PostgreSQL URL.
+- Add the following to your env.py file:
+```
+import os
+os.environ["DATABASE_URL"]="<your_postgresql_url>"
+os.environ["SECRET_KEY"]="<your_secret_key>"
+os.environ["CLOUDINARY_URL"]="<your_cloudinary_api_key>"
+```
+
+9. <b>Add env.py to .gitignore:</b><br>
+Ensure the env.py file is listed in your .gitignore file to prevent sensitive information from being pushed to GitHub.
+10. <b>Follow the Remaining Setup Steps:</b><br>
+Complete the rest of the Django project setup process as detailed in the above instructions before pushing your code to GitHub.
+
+## Fork the Project
+To create a copy of the original repository on your GitHub account, follow these steps:
+1. <b>Log in to GitHub:</b><br>
+Ensure you are logged into your [GitHub](https://github.com/) account.
+2. <b>Locate the Repository:</b><br>
+Access the repository using this link: [Hearth Keeper Repository](https://github.com/Sazzzel/Hearth_Keeper).
+3. <b>Fork the Repository:</b><br>
+At the top-right of the repository page, above the list of files, click the "Fork" button. This will create a forked copy of the repository in your GitHub account.
+4. <b>Access Your Forked Repository:</b><br>
+Once the fork is complete, you will have access to a copy of the repository in your GitHub account.
+5. <b>Set Up the Project Locally:</b><br>
+Follow the Django Project Setup steps provided above if you intend to work on the project locally.
+
+# Credits
+
+## Code
+
+- [Django Docs](https://www.djangoproject.com/)
+- [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+## Media
+
+### Additional reading/tutorials/books/blogs
+
+## Acknowledgements
+
+- Many thanks to my facilitator Amy for sharing all the links I could have asked for and more. Also for sharing her [Freefido GitHub Project](https://github.com/amylour/FreeFido_v2/) which helped me write this readme. 
