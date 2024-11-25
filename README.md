@@ -104,7 +104,7 @@ The corresponding sections and colours and identifying CSS variables are:
 *Black, white and grey used for backgrounds, text and Login/Logout icon*
 
 ![screenshot of colour scheme ADD THIS]()  
-*Colour Scheme for FreeFido website*
+*Colour Scheme for Hearth Keeper website*
 
 ![colour blind safe colour swatch ADD THIS]()  
 *Accessibility check for colour scheme*
@@ -158,7 +158,7 @@ All of my user stories can be seen on my [Github Projects Board ADD THIS](). The
 
 ## Scope Plane
 
-As this would not only be the building of my final project but also a learning experiance using new API's and covering many to many databases. I have built this website in using technologies I didn't know exsisted before I started this 16 week Full Stack Course. These technologies include Django, Bootstrap and Cloudinary. I follwed my agile planning and my user stories to help me keep on track and not fall into the many "what if I add..." sinarions. I did however write these down on paper with the forsite of adding these as my future fatures. I added my User Stories and Testing Tasks as issues on my [Github Projects Board ADD THIS]().
+As this would not only be the building of my final project but also a learning experiance using new API's and covering many to many databases. I have built this website using technologies I didn't know exsisted before I started this 16 week Full Stack Course. These technologies include Django, Bootstrap and Cloudinary. I follwed my agile planning and my user stories to help me keep on track and not fall into the many "what if I add..." sinarions. I did however write these down on paper with the forsite of adding these as my future fatures. I added my User Stories and Testing Tasks as issues on my [Github Projects Board ADD THIS]().
 
 Essential features of my project were:
 
@@ -172,7 +172,7 @@ I planned my project thoroughly as this has been something I have wanted to use 
 ## Structural Plane
 
 ![navbar icons ADD THIS]()  
-*Navigation icons for FreeFido*  
+*Navigation icons for Hearth Keeper*  
 
 ![header ADD THIS]()  
 *Sign Up page header*  
@@ -197,7 +197,12 @@ I wanted an easy to use website, that has a welcoming feel to all users.
 </details>
 
 <details>
-    <summary>Mobile/Tablet recipe Page Wireframe</summary>  
+    <summary>Mobile/Tablet Recipes Page Wireframe</summary>  
+    <img src="">
+</details>
+
+<details>
+    <summary>Mobile/Tablet Recipe Page Wireframe</summary>  
     <img src="">
 </details>
 
@@ -218,6 +223,11 @@ I wanted an easy to use website, that has a welcoming feel to all users.
 </details>
 
 <details>
+    <summary>Desktop Recipe Page Wireframe</summary>  
+    <img src="">
+</details>
+
+<details>
     <summary>Desktop Recipes Page Wireframe</summary>  
     <img src="">
 </details>
@@ -233,7 +243,7 @@ I wanted an easy to use website, that has a welcoming feel to all users.
 ![ERD Image]()  
 *Database Schema (ERD) for Hearth Keeper displaying relationships between components within the database*
 
-This Entity Relationship Diagram(ERD) demonstrates how each feature interacts with each other and the connected PostgreSQL Database. Using Django's User Model, and Django AllAuth to carry out all user authentication, a user_id is created when the user registers with their username and email. This allows the user create profile which is used to long into the site, create new recipes, add comments and photos to recipes, rate the recipes and create and manage their own My Cookbook which contains their favourite recipes.
+The Entity Relationship Diagram (ERD) illustrates how various features interact with each other and connect to the PostgreSQL database. The system uses Django's built-in User model and Django AllAuth for user authentication. Upon registration, a user_id is created for each user, based on their username and email. This allows the user to create a profile, which is used to log into the site. Users can then create new recipes, upload photos, add comments to recipes, rate them, and manage their personal "My Cookbook," which contains their favourite recipes.
 
 The Comments Model were inspired by the blog walkthrough by the Code Institute. This takes the username of the user via the user_Id as a forigenkey and lets them leave a comment on a recipe via the recipe_id that will require the admin to review and approve. 
 
@@ -244,30 +254,31 @@ Through the Admin Django Dashboard the super user will have access to approve or
 ### Security
 
 
+Several security measures were implemented in this project to safeguard user-submitted data. Unlike a purely informational website, Hearth keeper enables users to engage with the community. To comply with stringent internet security standards and ensure the protection of user data, the following processes were incorporated into the development of the project.
 
 **AllAuth**  
 
-Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on FreeFido. The setup of AllAuth included:
+Django AllAuth is an installable framework that handles user registration and authentication. Authentication was essential for determining whether a user was registered or unregistered, as well as controlling access to content on Hearth Keeper. The setup of AllAuth involved the following steps:
 
-- installing it to my workspace dependencies
-- adding it to my INSTALLED_APPS in my settings.py
-- sourcing the AUTHENTICATION_BACKENDS from the AllAuth docs for my settings.py
-- adding its URL to my projects 'urls.py'
-- run database migrations to create the tables needed for AllAuth
-- (For this version of FreeFido, to meet MVP, email and social accounts were not configured as part of the feedback/sign up options to the user. They will be included with the next release.)
+- Installing it as a dependency in my workspace
+- Adding it to the INSTALLED_APPS section of settings.py
+- Configuring the AUTHENTICATION_BACKENDS in settings.py using the settings from the AllAuth documentation
+- Including its URL in the project's urls.py
+- Running database migrations to create the necessary tables for AllAuth
+- (For this version of Hearth Keeper the email and social account sign-ups were not enabled. This was to make sure my website met the MVP. These features will be added in the next release.)
   
 **Defensive Design**  
 
-FreeFido was developed to ensure a smooth user experience, to the best of my current learning experience with Django. 
+Hearth Keeper was built using my current knowledge of Django and focused on providing a smooth user experience.
 
-- Input validation and error messages provide feedback to the user to guide them towards the desired outcome. 
-- Unregistered users are diverted to the Sign Up page from restricted access pages. 
-- Authentication processes control edit/delete icons to reveal them to the content author only. 
-- Deletion of data is confirmed through an additional modal, double-checking with the user.
-- Error pages are displayed with 'Take me home' buttons to help users get back on track. 
-- Testing and validation of features completes the process.
+- Input validation and error messages give users helpful feedback, guiding them toward their intended actions.
+- Unregistered users are redirected to the Sign-Up page when attempting to access restricted areas.
+- Authentication controls ensure that edit and delete icons are visible only to the content’s author.
+- Data deletions are confirmed with an additional modal, prompting the user to verify their decision.
+- Error pages include a "Take me home" button to help users easily return to the main page.
+- Thorough testing and validation ensure the features work as expected.
 
 **CSRF Tokens** 
 
-CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
+CSRF (Cross-Site Request Forgery) tokens are included in every form to authenticate the request with the server upon submission. Without these tokens, a site becomes vulnerable to attacks where malicious actors could steal user data.
   
